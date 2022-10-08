@@ -33,9 +33,6 @@ def detect(path):
 
 	return decoded_string
 
-
-
-
 def cvt_to_img(path):
 
 	"""
@@ -66,8 +63,6 @@ def cvt_to_img(path):
 	
 	return edge, blur
 
-
-
 def find_contours(edges):
 	"""
 	Finds contours in an image passed through an edge detection filter.
@@ -75,11 +70,8 @@ def find_contours(edges):
 
 	Input:
 		Image containing edges
-	
 	Output:
 		contours stored as an array of vector of points/coordinates.
-
-
 	"""
 	#find contours 
 	contours, heirarchy = cv2.findContours(edges , cv2.RETR_TREE , cv2.CHAIN_APPROX_SIMPLE)
@@ -101,15 +93,11 @@ def find_contours(edges):
 
 	return found
 
-
-
 def Create_bboxes(markers, draw_flag):
 	"""
 	Draws and Creates bounding boxes over the found position markers.
-
 	Input:
 		position markers for qr code and a flag to draw the qr codes.
-
 	Output:
 		numpy array of bounding boxes.
 	"""
@@ -127,8 +115,6 @@ def Create_bboxes(markers, draw_flag):
 
 	return boxes
 
-
-
 def crop_qr(boxes,blur):
 	"""
 	Finding the border of resulting qr code and cropping the image.
@@ -137,7 +123,6 @@ def crop_qr(boxes,blur):
 	Input:
 		boxes - numpy array of bounding boxes
 		blur  - image passed through gaussian blur filter.
-
 	Output:
 		cropped qr code image.
 	"""
