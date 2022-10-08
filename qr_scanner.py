@@ -1,9 +1,5 @@
-from cmath import e
-from tkinter import E
 import numpy as np
 import cv2
-import argparse as ap
-import time
 from pyzbar.pyzbar import decode
 
 #global vars
