@@ -1,8 +1,10 @@
 QR_Scanner is a helper function I designed while being part of a club. This was my first contribution that I solely worked on.
-Although this is not the exact same code as I first implemented but I've decided to split it into parts which makes more sense rather than a big jumbled up file.
+Although this is not the exact same code as I first implemented but I've decided to split it into smaller functions which makes more sense rather than a big jumbled up file.
 
 How it works:
-Can either create another test file to import qr_scanner.py and use the detect function directly or pass an absolute file path as a command line argument to qr_scanner.py.
+Import detect() function in another python file and execute it with appropriate arguments that is the absolute path to the image.
+
+Procedure:
 
 1. The file path is read and image is loaded from the file path using cv2.
 2. The image is converted to grayscale, passed through a gaussian blur filter.
